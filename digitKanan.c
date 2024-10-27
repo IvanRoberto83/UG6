@@ -1,14 +1,26 @@
 #include <stdio.h> //Jangan di rubah, jika di rubah akan langsung 0
 
 //kerjakan atau ubah kodenya hanya pada bagian int iniProses dan void Hasil.
-int iniProses(int namaKalian){
-//ganti parameter namaKalian dengan nama kalian. contoh bentuknya:
-//int iniProses(int ivan){}
+int iniProses(int ivan){
+    int hasil;
+    hasil = ivan % 10;
+    return hasil;
 }
 
 void Hasil(int a, int b, int c){
-//kerjakan di sini untuk output sama atau tidak samanya.
-//parameter int a, b, dan c untuk menyimpan pembanding bilangan 1, bilangan 2, dan bilangan 3.
+    a = iniProses(a);
+    b = iniProses(b);
+    c = iniProses(c);
+
+    if(a == b && b==c){
+        printf("\n3 bilangan sama");
+    }
+    else if(a == b || b == c || a == c){
+        printf("\n2 bilangan sama");
+    }
+    else{
+        printf("\ntidak ada bilangan yang sama");
+    }
 }
 
 //int main jangan di rubah 
